@@ -1,0 +1,217 @@
+:root{
+	--color1:  #CD999B;
+	--color2: #DACBCE;
+	--color3: #DD6B6B;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Sans";
+}
+
+body{
+	background-color: #FFF5F4;
+	box-sizing: border-box;
+	overflow-y: hidden; 
+	
+
+}
+
+main{
+    display: flex;
+    align-items: center;
+  	justify-content: center;
+}
+
+section{
+	display: grid;
+	grid-template-areas:
+        	"first-area second-area";
+}
+
+.main-first{
+	grid-area: first-area;
+	background-image: url(images/bg-pattern-desktop.svg);
+	background-position: left;
+	background-size: cover;
+}
+
+
+.main-second{
+	grid-area: second-area;
+	text-align: end;
+	display: flex;
+}
+
+.image{
+	height: 100vh;
+	width: 42vw;
+	margin: auto;
+}
+
+.mainbox{
+	display: grid;
+	grid-template-areas:
+        	"boxone-area"
+			"boxtwo-area";
+	row-gap: 138px;		
+	margin-top: 65px;
+	margin-left: 165px;
+	margin-right: 165px;
+}
+
+
+.boxone>img{
+	height: 4.1vh;	
+}
+
+.boxtwo>h1{
+	font-size: 4em;
+	text-transform: uppercase;
+	letter-spacing: 1.4rem;
+}
+
+.boxtwo>:nth-child(1){
+	color: var(--color1);
+}
+
+.boxtwo>:nth-child(4){
+	margin-top: 30px;
+	color: var(--color1);
+	font-size: 1.1em;
+	padding-right: 50px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.input{
+	margin-top: 49px;
+	height: 56px;
+	width: 445px;
+	border: 2px solid var(--color2);
+	border-radius: 50px;
+	padding-left: 30px;
+	font-size: 1em;
+	font-weight: bold;
+	color: var(--color2);
+}
+
+input::placeholder{
+	font-size: 1em;
+	font-weight: bold;
+	color: var(--color2);
+}
+
+:focus{
+	outline-color: var(--color1);
+}
+
+button{
+	height: 60px;
+	width: 100px;
+	position: absolute;
+	margin-left: -90px;
+	margin-top: 49px;
+	background-color: #F4A8AA;
+	border: none;
+	border-radius: 50px;
+}
+
+button:active{
+	background-color: var(--color1);
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+.texterror{
+	margin-top: 10px;
+	color: var(--color3);
+	font-weight: bold;
+	padding-left: 30px;
+	display: none;
+}
+
+.imageerror{
+	position: absolute;
+	margin-left: -130px;
+	margin-top: 65px;
+	display: none;
+}
+
+.imageerroractive{
+	display: initial;
+	position: absolute;
+}
+
+.inputerror{
+	border: 2px solid red;
+}
+
+.inputvalid{
+	border: 2px solid green;
+}
+
+.textevalid{
+	margin-top: 10px;
+	color: green;
+	font-weight: bold;
+	padding-left: 30px;
+	display: none;
+}
+
+.active{
+	display: block;
+}
+
+@media(max-width: 800px){
+
+body{
+	overflow-y: scroll; 
+}
+
+
+	section{
+	display: grid;
+	grid-template-areas:
+        	"second-area"
+        	"first-area";
+    gap: 60px;	
+}
+
+.image{
+	height: 31.25vh;
+	width: 100%;
+}
+
+.mainbox{	
+	margin: 0 auto;
+}
+
+
+.boxtwo>h1{
+	font-size: 2em;
+	text-align: center;
+}
+
+.boxone{
+	display: none;
+}
+
+.boxtwo>:nth-child(4){
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+.input{
+	height: 56px;
+	width: 300px;
+	margin-left: 25px;
+}
+
+
+}
